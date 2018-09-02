@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #343e3d;
+  color: #aedcc0;
+}
+
+.results {
+  display: none;
+}
+
+button {
+  border: none;
+  background-color: #aedcc0;
+  color: black;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
