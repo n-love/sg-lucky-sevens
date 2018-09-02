@@ -5,12 +5,26 @@ body {
   color: #aedcc0;
 }
 
+main {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
 .results {
   display: none;
 }
 
+.error {
+  display: none;
+}
+
 button {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem;
   border: none;
+  border-radius: .5rem;
   background-color: #aedcc0;
   color: black;
   outline: none;
@@ -18,4 +32,10 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+table {
+  text-align: left;
+  width: 100%;
+  border: 1px solid white;
 }

@@ -1,12 +1,17 @@
 var playButton = document.querySelector("button");
 var results = document.querySelector(".results");
 var bet = document.querySelector("#bet");
+var error = document.querySelector(".error");
 
 playButton.addEventListener("click", function(){
   results.style.display = "none";
 
-  //Check if money was bet | Add Popup Error
-  bet.value <= 0 ? console.log("ERROR: Please enter a bet above 0") : playGame();
+  if (playButton.textContent === "Play Again?"){
+    playButton.textContent = "Play";
+  }
+
+  //Check if money was bet & displays error if bet less than 0
+  bet.value <= 0 ? error.style.display = "initial" : playGame();
 });
 
 function playGame(){
@@ -15,6 +20,11 @@ function playGame(){
   var highestMoney = 0;
   var startAmount = bet.value;
   var betAmount = startAmount;
+
+  //Hides the error message
+  error.style.display = "none";
+
+  // console.log("BETAMOUNT: " + betAmount);
 
   //Plays the game until money is gone
   while (betAmount > 0){
@@ -26,7 +36,8 @@ function playGame(){
     }
 
     rollCount++;
-    dice === 7 ? betAmount += 4 : betAmount--;
+    dice === 7 ? betAmount = Number(betAmount) + 4 : betAmount--;
+    // console.log(rollCount + ": " + dice + "|BET: " + betAmount);
   }
 
   //Displays Results
@@ -39,5 +50,5 @@ function playGame(){
 }
 
 function rollDice() {
-  return Math.floor(Math.random() * 7);
+  return Math.floor(Math.random() * 6) + 1;
 }

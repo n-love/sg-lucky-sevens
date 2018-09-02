@@ -7,35 +7,41 @@
     <link rel="stylesheet" type="text/css" href="app.css">
   </head>
   <body>
-    <h1>Lucky Sevens</h1>
+    <main>
+      <h1>Lucky Sevens</h1>
 
-    <label>Starting Bet:
-      <input id="bet" type="number" step="1" placeholder="$0.00">
-    </label>
-    <button>Play</button>
+      <label>Starting Bet:
+        <input id="bet" type="number" step="1" placeholder="$0.00">
+      </label>
+      <button>Play</button>
 
-    <div class="results">
-      <hr>
-      <h1>Results</h1>
-      <table>
-        <tr>
-          <td>Starting Bet</td>
-          <td id="startBet">$0.00</td>
-        </tr>
-        <tr>
-          <td>Total Rolls Before Going Broke</td>
-          <td id="rollNum">0</td>
-        </tr>
-        <tr>
-          <td>Highest Amount Won</td>
-          <td id="highest">$0.00</td>
-        </tr>
-        <tr>
-          <td>Roll Count at Highest Amount Won</td>
-          <td id="highestRollNum">0</td>
-        </tr>
-      </table>
-    </div>
+      <section class="error">
+        <h3>ERROR: Please enter a bet higher than $0.00</h3>
+      </section>
+
+      <section class="results">
+        <hr>
+        <h1>Results</h1>
+        <table>
+          <tr>
+            <td>Starting Bet</td>
+            <td id="startBet">$0.00</td>
+          </tr>
+          <tr>
+            <td>Total Rolls Before Going Broke</td>
+            <td id="rollNum">0</td>
+          </tr>
+          <tr>
+            <td>Highest Amount Won</td>
+            <td id="highest">$0.00</td>
+          </tr>
+          <tr>
+            <td>Roll Count at Highest Amount Won</td>
+            <td id="highestRollNum">0</td>
+          </tr>
+        </table>
+      </section>
+    </main>
 
     <script type="text/javascript" src="luckysevens.js"></script>
   </body>
