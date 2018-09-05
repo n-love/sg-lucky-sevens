@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #343e3d;
-  color: #aedcc0;
+  background-color: #F1FFD3;
+  color: #417B5A;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
 }
 
 main {
-  margin: 0 auto;
-  width: 80%;
+  margin: 10% auto;
+  width: 70%;
   text-align: center;
+}
+
+h1 {
+  letter-spacing: 2px;
 }
 
 .results {
@@ -25,17 +33,46 @@ button {
   padding: 1rem 1.5rem;
   border: none;
   border-radius: .5rem;
-  background-color: #aedcc0;
-  color: black;
+  background-color: #417B5A;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.25em;
   outline: none;
+  transition: all 0.3s;
+  --webkit-transition: all 0.3s;
+  --moz-transition: all 0.3s;
 }
 
 button:hover {
   cursor: pointer;
+  font-weight: bold;
+  background-color: rgba(65,123,90,0);
+  border: 1px solid #417B5A;
+  color: #417B5A;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(65, 123, 90, 0), rgba(65, 123, 90, 0.75), rgba(65, 123, 90, 0));
 }
 
 table {
   text-align: left;
-  width: 100%;
-  border: 1px solid white;
+  margin: 0 auto;
+  width: 80%;
+  border: 2px solid #417B5A;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+}
+
+tr:nth-child(even){
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+tr:nth-child(odd){
+  background-color: rgba(255, 255, 255, 0.2);
 }
